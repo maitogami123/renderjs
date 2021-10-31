@@ -173,12 +173,14 @@ const pokeKanto = [
 
 
 const renderPokemon = (pokemons) => {
-    var pokeBlock = document.querySelector('#poke-block');
+    var pokeBlock = document.querySelector('.poke-block');
     var htmls = pokemons.map(poke => `
-        <img src="${poke.img}">
-        <h3>Name: ${poke.name}</h3>
-        <p>Number: ${poke.id}</p>
-        <p>${poke.type.join(', ')}</p>
+        <div class = "poke-wrapper">
+            <img src="${poke.img}">
+            <h3>Name: ${poke.name}</h3>
+            <p>Number: ${poke.id}</p>
+            <p>Type: ${poke.type.join(', ')}</p>
+        </div>
     `)
     pokeBlock.innerHTML = htmls.join('');
 }
