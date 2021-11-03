@@ -10,13 +10,60 @@
 }
 
 .poke-block {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.religion-name {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .poke-wrapper {
+    border-radius: 20px;
+    margin-bottom: 20px;
     width: 30%;
-    
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke__img {
+    height: 400px;
+    width: 300px;
+    object-fit: scale-down;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
+.poke__type--fire {
+    background-color: #fd7d24;
+}
+
+.poke__type--grass {
+    background-color: #9bcc50;
+}
+
+.poke__type--water {
+    background-color: #4592c4;
+}
+
+.poke__type--electric {
+    background-color: #eed535;
+}
+
+.poke__type--psychic {
+    background-color: #f366b9;
+}
+
+.poke__type--other {
+    background-color: #a4acaf;
 }
