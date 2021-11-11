@@ -447,6 +447,7 @@ const religion = [
 
 const render = (religion) => {
     const pokeBlock = document.querySelector('.poke-block');
+    pokeBlock.style.marginTop = 100 + 'px';
     let htmls = `
         <h1 class="religion-name">${religion.name}</h1>
         ${renderPokemon(religion.pokemons)}
@@ -454,4 +455,23 @@ const render = (religion) => {
     pokeBlock.innerHTML = htmls;
 }
 
-render(pokeDex[0]);
+let home = document.querySelector('#home');
+let kanto = document.querySelector('#kanto');
+let johto = document.querySelector('#johto');
+
+home.onclick = () => {
+    const pokeBlock = document.querySelector('.poke-block');
+    pokeBlock.style.marginTop = 0 + 'px';
+    let htmls = `
+        <img src="./assets/img/WorldMap.jpg" alt="">
+    `
+    pokeBlock.innerHTML = htmls;
+}
+
+kanto.onclick = () => {
+    render(pokeDex[0]);
+}
+
+johto.onclick = () => {
+    render(pokeDex[1]);
+}

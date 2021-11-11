@@ -5,17 +5,61 @@
 }
 
 .root {
-    width: 1200px;
-    margin: auto;
+    overflow: hidden;
 }
 
 .poke-block {
-    margin-top: 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+/* Nav section */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+    padding: 0 20px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.list-item {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #000;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+
+.list-item:hover {
+    background-color: #fff;
+    border-radius: 20px;;
+    color: #000;
+}
+
+/* Pokedex section */
 
 .religion-name {
     width: 100%;
