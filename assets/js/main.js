@@ -430,7 +430,7 @@ const renderPokemon = (pokemons) => {
             <p class="poke__type }">Type: <span class="test">${handleUpperCase(poke.type)}</span></p>
         </div>
     `)
-    return htmls
+    return htmls.join('');
 }
 
 const religion = [
@@ -448,6 +448,7 @@ const religion = [
 const render = (religion) => {
     const pokeBlock = document.querySelector('.poke-block');
     pokeBlock.style.marginTop = 100 + 'px';
+    pokeBlock.style.width = 1200 + 'px';
     let htmls = `
         <h1 class="religion-name">${religion.name}</h1>
         ${renderPokemon(religion.pokemons)}
@@ -462,6 +463,7 @@ let johto = document.querySelector('#johto');
 home.onclick = () => {
     const pokeBlock = document.querySelector('.poke-block');
     pokeBlock.style.marginTop = 0 + 'px';
+    pokeBlock.style.width = 100 + '%';
     let htmls = `
         <img src="./assets/img/WorldMap.jpg" alt="">
     `

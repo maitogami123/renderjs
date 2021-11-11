@@ -10,9 +10,9 @@
 
 .poke-block {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: auto;
 }
 
 /* Nav section */
