@@ -456,24 +456,48 @@ const render = (religion) => {
     pokeBlock.innerHTML = htmls;
 }
 
-let home = document.querySelector('#home');
-let kanto = document.querySelector('#kanto');
-let johto = document.querySelector('#johto');
+const home = document.querySelector('#home');
+const kanto = document.querySelector('#kanto');
+const johto = document.querySelector('#johto');
+let mapItems = document.querySelectorAll('.map-item');
 
 home.onclick = () => {
     const pokeBlock = document.querySelector('.poke-block');
     pokeBlock.style.marginTop = 0 + 'px';
     pokeBlock.style.width = 100 + '%';
     let htmls = `
-        <img src="./assets/img/WorldMap.jpg" alt="">
+            <img src="./assets/img/WorldMap.jpg" class = "background-img" alt="" usemap="#image-map">
+            <div class="religion-select">
+                <h1 class="religion-heading">Select Religion</h1>
+            </div>
+            <map name="image-map">
+                <area target="" class="map-item" alt="Johto Area" title="Johto Area" href="#" coords="685,125,681,666,590,574,464,725,303,799,206,592,21,382,54,145,65,105,101,64,169,39,214,24,253,12,319,52,349,79,399,82,448,83,508,105,542,115,585,112,605,104,623,141,644,145" shape="poly">
+                <area target="" class="map-item" alt="Kanto Area" title="Kanto Area" href="#" coords="687,127,678,662,768,877,1074,871,1248,779,1284,640,1266,476,1286,381,1300,275,1150,262,1028,277,932,264,811,206" shape="poly">
+            </map>
     `
     pokeBlock.innerHTML = htmls;
+    mapItems = document.querySelectorAll('.map-item');
+    mapItems[0].onclick = () => {
+        render(pokeDex[1]);
+    }
+    mapItems[1].onclick = () => {
+        render(pokeDex[0]);
+    }
 }
 
 kanto.onclick = () => {
+    isRerender = false;
     render(pokeDex[0]);
 }
 
 johto.onclick = () => {
+    isRerender = false;
     render(pokeDex[1]);
+}
+
+mapItems[0].onclick = () => {
+    render(pokeDex[1]);
+}
+mapItems[1].onclick = () => {
+    render(pokeDex[0]);
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -23,10 +25,12 @@
     left: 0;
     right: 0;
     height: 56px;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .5);
     display: flex;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .logo {
@@ -38,25 +42,48 @@
     display: flex;
     justify-content: center;
     list-style: none;
-
 }
 
 .list-item {
     display: block;
     text-decoration: none;
     font-size: 20px;
+    font-weight: 500;
     padding: 10px 20px;
-    color: #000;
+    color: #ffcc01;
     text-transform: uppercase;
     transition: all 0.2s ease;
     border-radius: 10px;
     letter-spacing: 2px;
+    text-shadow: -1px -1px 0 #4a7d8f, 1px -1px 0 #4a7d8f, -1px 1px 0 #4a7d8f, 1px 1px 0 #4a7d8f;
 }
 
 .list-item:hover {
     background-color: #fff;
     border-radius: 20px;;
-    color: #000;
+    color: #ffcc01;
+}
+
+/* Map section */
+
+.background-img {
+    width: 100%;
+    position: relative;
+}
+
+.religion-select {
+    position: absolute;
+    top: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.religion-heading {
+    font-family: 'Press Start 2P';
+    background-color: #fff;
+    padding: 15px 20px;
+    border: 4px solid #000;
+    margin: 0 60px;
 }
 
 /* Pokedex section */

@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
     <title>Document</title>
 </head>
 <body>
     <div class="root">
         <nav class="nav-bar">
-            <img src="./assets/img/logo.png" alt="logo" class="logo">
+            <a href="">
+                <img src="./assets/img/logo.png" alt="logo" class="logo">
+            </a>
             <ul class="nav-list">
                 <li><a href="#" id="home" class="list-item">Home</a></li>
                 <li><a href="#" id="kanto" class="list-item">Kanto</a></li>
@@ -18,8 +21,15 @@
             </ul>
         </nav>
         <div class="poke-block">
-            <img src="./assets/img/WorldMap.jpg" alt="">
-        </div>
+                <img src="./assets/img/WorldMap.jpg" class = "background-img" alt="" usemap="#image-map">
+                <div class="religion-select">
+                    <h1 class="religion-heading">Select Religion</h1>
+                </div>
+                <map name="image-map">
+                    <area target="" class="map-item" alt="Johto Area" title="Johto Area" href="#" coords="685,125,681,666,590,574,464,725,303,799,206,592,21,382,54,145,65,105,101,64,169,39,214,24,253,12,319,52,349,79,399,82,448,83,508,105,542,115,585,112,605,104,623,141,644,145" shape="poly">
+                    <area target="" class="map-item" alt="Kanto Area" title="Kanto Area" href="#" coords="687,127,678,662,768,877,1074,871,1248,779,1284,640,1266,476,1286,381,1300,275,1150,262,1028,277,932,264,811,206" shape="poly">
+                </map>
+            </div>
     </div>
     <script src="./assets/js/main.js"></script>
 </body>
